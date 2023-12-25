@@ -11,9 +11,13 @@ def to_the_server():
 
 
 @app.route('/get_jopa')
-def connect():
+def get_jopa():
     return {} #linker.connect("323")
 
+
+@app.route('/get_govno')
+def get_govno():
+    return {}
 
 @app.route('/govno1')
 def connect_to_govno1():
