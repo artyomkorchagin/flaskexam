@@ -1,28 +1,7 @@
-body{
-    margin: 5px;
 
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    color: #6c7279;
-    background-color: #061a37;
+table, th, td {
+  border: 1px solid black;
 }
-
-.hr{
-    background-color: #2944b0;
-}
-
-
-.inp{
-    background-color: #23354e;
-    font-family: inherit;
-    font-size: 14px;
-    color: #fff;
-    width: 260px;
-}
-.light_inp{
-
-}
-
 
 .btn{
     background-color: #3150f1;
