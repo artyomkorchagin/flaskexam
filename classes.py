@@ -5,6 +5,8 @@ import json
 import re
 import pymongo
 import numpy
+from flask import request
+
 
 class Logger:
     def __init__(self, db_name):
@@ -23,3 +25,12 @@ class Govno:
     def __init__(self):
         self.n_1 = None
         self.n_2 = None
+        self.value = None
+
+    def get_value(self):
+        self.value = request.args.get('id1', '')
+        self.n1 = self.value
+        self.value = request.args.get('id2', '')
+        self.n2 = self.value
+
+
