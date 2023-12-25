@@ -35,3 +35,37 @@ function get_govno_data()
         },
     })
 }
+
+function create_chart() {
+    $.ajax({
+        type: 'GET',
+        url: '/get_chart',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: {},
+        success: function (response) {
+            new Chart(
+                document.querySelector('.chart'),{
+                    type: 'line',
+                    data: {
+                        labels: response['time_data'],
+                        datasets: [
+                            {
+                                borderColor:'blue',
+                                backgroundColor:'skyblue',
+                                label: "Динамика изменения говна",
+                                data: response['temp_data'],
+                                cubicInterpolationMode: 'monotone',
+                                fill: true
+                            }
+                        ]
+                    },
+                    options: {
+                        backgroundColor:'skyblue',
+                        responsive: false
+                    }
+                }
+            );
+        }
+    });
+}

@@ -5,6 +5,7 @@
     <title>Govno2</title>
     <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="../static/js/index.js"></script>
+    <script src="https://unpkg.com/chart.js@3.5.0/dist/chart.min.js"></script>
 </head>
 <body>
     <div id="someID">
@@ -17,6 +18,10 @@
             <input type="text" id="test" placeholder="говно3">
             <hr>
             <button onclick="get_govno_data()">Внести данные</button>
+            <hr>
+            <label>Govno graph</label>
+            <canvas class="chart" width="900" height="900"></canvas>
+            <button onclick="create_chart()" >Построить график</button>
         </div>
     </div>
 </body>

@@ -5,6 +5,7 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 govno = classes.Govno()
+logger = classes.Logger('govnoDB')
 
 @app.route('/')
 def to_the_server():
@@ -18,11 +19,18 @@ def get_jopa():
 @app.route('/load_govno')
 def load_govno():
     govno.connect(request)
+    logger.insert_govno(int(govno.n_1), 'n_1')
+    logger.insert_govno(int(govno.n_2), 'n_2')
     return {}
 
 @app.route('/get_govno')
 def get_govno():
     return govno.get_value()
+
+@app.route('/get_chart')
+def connect_chart():
+    response = logger.govno_chart('n_1')
+    return json.dumps(response)
 
 
 @app.route('/govno1')
