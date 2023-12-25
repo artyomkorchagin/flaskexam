@@ -28,7 +28,8 @@ class Govno:
         self.value = None
 
     def get_value(self):
-        self.n1 = request.args.get('id1', '')
-        self.n2 = request.args.get('id2', '')
+        self.n_1 = request.args.get('id1', '')
+        self.n_2 = request.args.get('id2', '')
+        return json.dumps({"n_1": self.n_1, "n_2": self.n_2})
 
 

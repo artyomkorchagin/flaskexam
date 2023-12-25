@@ -19,7 +19,7 @@ def get_jopa():
 
 @app.route('/get_govno')
 def get_govno():
-    return govno.get_value()
+    return json.dumps({'n_1': "123", 'n_2': "3213"})
 
 @app.route('/govno1')
 def connect_to_govno1():

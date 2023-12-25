@@ -30,6 +30,8 @@ function get_govno_data()
         },
         success: function (response)
         {
+        document.getElementById("n_1").value = response['n_1']
+        document.getElementById("n_2").value = response['n_2']
         },
     })
 }
