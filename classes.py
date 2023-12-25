@@ -23,9 +23,9 @@ class text_linker:
 
 class Govno:
     def __init__(self):
-        self.n_1 = None
-        self.n_2 = None
-        self.value = None
+        self.n_1 = 'test1'
+        self.n_2 = 'test2'
+        print(self.n_1, self.n_2)
 
     def get_value(self):
         self.n_1 = request.args.get('id1', '')

@@ -17,9 +17,13 @@ def get_jopa():
     return {} #linker.connect("323")
 
 
+@app.route('/load_govno')
+def load_govno():
+    return {}
+
 @app.route('/get_govno')
 def get_govno():
-    return json.dumps({'n_1': "123", 'n_2': "3213"})
+    return govno.get_value()
 
 @app.route('/govno1')
 def connect_to_govno1():
