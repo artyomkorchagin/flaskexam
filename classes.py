@@ -28,9 +28,7 @@ class Govno:
         self.value = None
 
     def get_value(self):
-        self.value = request.args.get('id1', '')
-        self.n1 = self.value
-        self.value = request.args.get('id2', '')
-        self.n2 = self.value
+        self.n1 = request.args.get('id1', '')
+        self.n2 = request.args.get('id2', '')
 
 

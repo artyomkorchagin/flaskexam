@@ -15,7 +15,6 @@ function send_jopa_data()
         }
     })
 }
-
 function get_govno_data()
 {
     $.ajax(
@@ -31,6 +30,6 @@ function get_govno_data()
         },
         success: function (response)
         {
-        }
+        },
     })
 }
