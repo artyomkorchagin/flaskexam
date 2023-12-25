@@ -19,3 +19,7 @@ class text_linker:
         self.transmit = transmit
         return json.dumps({"transmit": self.transmit})
 
+class Govno:
+    def __init__(self):
+        self.n_1 = None
+        self.n_2 = None
