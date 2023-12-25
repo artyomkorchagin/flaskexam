@@ -4,7 +4,6 @@ import classes
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
-linker = classes.text_linker()
 govno = classes.Govno()
 
 @app.route('/')
@@ -14,16 +13,17 @@ def to_the_server():
 
 @app.route('/get_jopa')
 def get_jopa():
-    return {} #linker.connect("323")
-
+    return {}
 
 @app.route('/load_govno')
 def load_govno():
+    govno.connect(request)
     return {}
 
 @app.route('/get_govno')
 def get_govno():
     return govno.get_value()
+
 
 @app.route('/govno1')
 def connect_to_govno1():
